@@ -8,11 +8,7 @@ import { InvoicesTableSkeleton } from "@/app/ui/skeletons";
 import { Suspense } from "react";
 
 export default async function Page(props: {
-  searchParams?: Promise<{
-    query?: string;
-    page?: string;
-  }>;
-  params: {};
+  searchParams?: Promise<any> | undefined;
 }) {
   const searchParams = await props.searchParams;
   const query = searchParams?.query || "";
